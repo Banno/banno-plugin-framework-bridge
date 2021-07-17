@@ -1,0 +1,36 @@
+{
+  "name": "@jack-henry/banno-plugin-framework-bridge",
+  "version": "1.0.0",
+  "description": "A library to facilitate communication between web apps running in a webview or iframe and their host application.",
+  "type": "module",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Banno/banno-plugin-framework-bridge.git"
+  },
+  "scripts": {
+    "clean:typings": "rimraf './src/**/*.d.ts' && rimraf './index.d.ts'",
+    "typings": "yarn clean:typings && tsc",
+    "typecheck": "tsc --emitDeclarationOnly false --noEmit",
+    "build": "rimraf './dist/**' && node ./build/build.js"
+  },
+  "author": "John Robinson <john.robinson@banno.com>",
+  "contributors": [
+    "Chad Killingsworth <ckilliingsworth@jackhenry.com>"
+  ],
+  "license": "Apache-2.0",
+  "files": [
+    "README.MD",
+    "src/",
+    "dist/",
+    "src/**/*.d.ts"
+  ],
+  "devDependencies": {
+    "closure-calculate-chunks": "^3.0.2",
+    "google-closure-compiler": "^20210601.0.0",
+    "gulp": "4.x",
+    "rimraf": "^3.0.0",
+    "string-replace-source-map": "^1.1.0",
+    "typescript": "^3.7.5"
+  }
+}
