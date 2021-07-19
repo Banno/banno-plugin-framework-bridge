@@ -14,17 +14,17 @@ Host applications can send the web-app the following events:
 
 The web app can dispatch the following events up to the host application:
 
-`click-link` - `{href: 'https://target', external:boolean}` - a routeable link was clicking within the app. If external is true, link will be opened in a new tab window in Banno Online or an external browser on Banno Mobile.
+`click-link` - `{href: 'https://target', external:boolean}` - A routeable link was clicked within the app. If external is true, link will be opened in a new tab window in Banno Online or an external browser on Banno Mobile.
 
-`ping` - occurs periodically to prevent the host app from timing out due to inactivity
+`ping` - Occurs periodically to prevent the host app from timing out due to inactivity.
 
-`ready` - the web app has finished loading it's assets and initial data. useful for hiding native loading indicators
+`ready` - The web app has finished loading it's assets and initial data. Used for hiding native loading indicators.
 
-`request-close` - the web app would like to be closed. Not valid in all browsing contexts.
+`request-close` - The web app would like to be closed. Not valid in all browsing contexts.
 
-`request-resize` - the web app has been resized and is reporting it's new height
+`request-resize` - The web app has been resized and is reporting it's new height.
 
-`request-sync` - the web app needs the host to perform a sync
+`request-sync` - The web app needs the host to perform a sync.
 
 ## Routing
 
@@ -51,7 +51,7 @@ An anchor with a `target="_top"` attribute will be intercepted and converted int
 <a href="/deep-link" target="_top">App deep link - internal</a>
 ```
 
-An anchor with a `target="_blank"` attribute will be intercepted and converted into an external app link. In Banno Online, the link will open in a new tab where on Banno Mobile, the link will open in embedded web browser. Since the internal web view and embedded browser do not share cookie storage, in Mobile, the user will be un-authenticated.
+An anchor with a `target="_blank"` attribute will be intercepted and converted into an external app link. In Banno Online, the link will open in a new tab where on Banno Mobile, the link will open in an embedded web browser. Since the internal web view and embedded browser do not share cookie storage, in Mobile, the user will be un-authenticated.
 ```html
 <a href="/external-link" target="_blank">App external link</a>
 ```
