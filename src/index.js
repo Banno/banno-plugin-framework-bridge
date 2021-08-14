@@ -1,6 +1,6 @@
 import { postUniversalMessage } from './post-message.js';
 import ClickLink from './messages/click-link.js';
-import RequestResize from './messages/request-resize';
+import RequestResize from './messages/request-resize.js';
 import enableRouter from './router.js';
 import Message from './messages/message.js';
 
