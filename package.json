@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A library to facilitate communication between web apps running in a webview or iframe and their host application.",
   "type": "module",
-  "main": "src/index.js",
+  "main": "dist/banno-plugin-framework-bridge.js",
+  "module": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Banno/banno-plugin-framework-bridge.git"
