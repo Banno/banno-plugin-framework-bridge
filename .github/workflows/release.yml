@@ -1,0 +1,31 @@
+name: Release
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**/*.md'
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      # install deps
+      - run: yarn install
+      # generate typings
+      - run: yarn typings
+      # build dist
+      - run: yarn build
+        # release to npm
+      - run: git config user.name "GitHub Actions"
+      - run: git config user.email "actions@users.noreply.github.com"
+      # run the release
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
