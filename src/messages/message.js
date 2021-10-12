@@ -3,7 +3,5 @@ export default class Message {
   constructor(type) {
     /** @type {string} */
     this.type = type;
-    /** @type {Object} */
-    this.data = {};
   }
 }
