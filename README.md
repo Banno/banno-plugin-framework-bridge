@@ -2,6 +2,15 @@
 
 A javascript module to interface between a Banno Plugin webview and the host application.
 
+## NOTE:
+
+Some of this module's features are in an [Alpha](https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha) phase of development.
+
+An `(Alpha)` annotation by a feature name means that the feature has not been verified to function across all of Banno's consumer apps:
+- `Banno Online`
+- `Banno Mobile (Android)`
+- `Banno Mobile (iOS)`
+
 ## Routing
 
 The app contains a small router to automatically convert html `<a>` tag clicks into app `click-link` events.
