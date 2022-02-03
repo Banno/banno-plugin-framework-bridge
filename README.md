@@ -32,7 +32,7 @@ An anchor with a `target="_blank"` attribute will be intercepted and converted i
 <a href="/external-link" target="_blank">App external link</a>
 ```
 
-## Host events
+## Host events (Alpha)
 
 Host applications can send the web-app the following events:
 
@@ -40,7 +40,7 @@ Host applications can send the web-app the following events:
 
 `history-forward` - 'forward' navigation occured.
 
-## App events
+## App events (Alpha)
 
 The web app can dispatch the following events up to the host application:
 
