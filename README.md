@@ -2,29 +2,14 @@
 
 A javascript module to interface between a Banno Plugin webview and the host application.
 
-## Host events
+## NOTE:
 
-Host applications can send the web-app the following events:
+Some of this module's features are in an [Alpha](https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha) phase of development.
 
-`history-back` - 'back' navigation occured.
-
-`history-forward` - 'forward' navigation occured.
-
-## App events
-
-The web app can dispatch the following events up to the host application:
-
-`click-link` - `{href: 'https://target', external:boolean}` - A routeable link was clicked within the app. If external is true, link will be opened in a new tab window in Banno Online or an external browser on Banno Mobile.
-
-`ping` - Occurs periodically to prevent the host app from timing out due to inactivity.
-
-`ready` - The web app has finished loading it's assets and initial data. Used for hiding native loading indicators.
-
-`request-close` - The web app would like to be closed. Not valid in all browsing contexts.
-
-`request-resize` - The web app has been resized and is reporting it's new height.
-
-`request-sync` - The web app needs the host to perform a sync.
+An `(Alpha)` annotation by a feature name means that the feature has not been verified to function across all of Banno's consumer apps:
+- `Banno Online`
+- `Banno Mobile (Android)`
+- `Banno Mobile (iOS)`
 
 ## Routing
 
@@ -55,3 +40,27 @@ An anchor with a `target="_blank"` attribute will be intercepted and converted i
 ```html
 <a href="/external-link" target="_blank">App external link</a>
 ```
+
+## Host events (Alpha)
+
+Host applications can send the web-app the following events:
+
+`history-back` - 'back' navigation occured.
+
+`history-forward` - 'forward' navigation occured.
+
+## App events (Alpha)
+
+The web app can dispatch the following events up to the host application:
+
+`click-link` - `{href: 'https://target', external:boolean}` - A routeable link was clicked within the app. If external is true, link will be opened in a new tab window in Banno Online or an external browser on Banno Mobile.
+
+`ping` - Occurs periodically to prevent the host app from timing out due to inactivity.
+
+`ready` - The web app has finished loading it's assets and initial data. Used for hiding native loading indicators.
+
+`request-close` - The web app would like to be closed. Not valid in all browsing contexts.
+
+`request-resize` - The web app has been resized and is reporting it's new height.
+
+`request-sync` - The web app needs the host to perform a sync.
