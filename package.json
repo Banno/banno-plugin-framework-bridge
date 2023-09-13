@@ -27,11 +27,15 @@
     "src/**/*.d.ts"
   ],
   "devDependencies": {
-    "closure-calculate-chunks": "^3.0.2",
-    "google-closure-compiler": "^20210601.0.0",
+    "closure-calculate-chunks": "^3.1.1",
+    "google-closure-compiler": "^20230802.0.0",
     "gulp": "4.x",
-    "rimraf": "^3.0.0",
-    "string-replace-source-map": "^1.1.0",
+    "rimraf": "^5.x",
+    "string-replace-source-map": "^1.3.0",
     "typescript": "^3.7.5"
+  },
+  "resolutions": {
+    "ansi-regex": "^5.0.1",
+    "glob-parent": "^5.1.2"
   }
 }
