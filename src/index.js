@@ -7,6 +7,7 @@ import Message from './messages/message.js';
 const MESSAGES = {
   REQUEST_CLOSE: 'request-close',
   REQUEST_SYNC: 'request-sync',
+  REQUEST_REFRESH: 'request-refresh',
   PING: 'ping',
   READY: 'ready',
 };
@@ -23,6 +24,13 @@ function requestClose() {
  */
 function requestSync() {
   postUniversalMessage(new Message(MESSAGES.REQUEST_SYNC));
+}
+
+/**
+ * request that the host perform a refresh of the component
+ */
+function requestRefresh() {
+  postUniversalMessage(new Message(MESSAGES.REQUEST_REFRESH));
 }
 
 /**
