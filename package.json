@@ -1,6 +1,6 @@
 {
   "name": "@jack-henry/banno-plugin-framework-bridge",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library to facilitate communication between web apps running in a webview or iframe and their host application.",
   "type": "module",
   "main": "dist/banno-plugin-framework-bridge.js",
