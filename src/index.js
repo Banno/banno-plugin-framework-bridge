@@ -139,10 +139,11 @@ window.addEventListener('message', event => {
 export {
   requestClose,
   requestSync,
+  requestResize,
+  requestRefresh,
   postUniversalMessage,
   ping,
   ready,
-  requestResize,
   host,
   HOST_EVENTS,
   enableRouter,
