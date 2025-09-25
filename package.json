@@ -10,7 +10,7 @@
     "url": "https://github.com/Banno/banno-plugin-framework-bridge.git"
   },
   "scripts": {
-    "clean:typings": "rimraf './src/**/*.d.ts' && rimraf './index.d.ts'",
+    "clean:typings": "rimraf -g './src/**/*.d.ts' && rimraf './index.d.ts'",
     "typings": "yarn clean:typings && tsc",
     "typecheck": "tsc --emitDeclarationOnly false --noEmit",
     "build": "rimraf './dist/**' && node ./build/build.js"
@@ -29,8 +29,8 @@
   "devDependencies": {
     "closure-calculate-chunks": "^3.1.1",
     "google-closure-compiler": "^20240317.0.0",
-    "gulp": "^5.x",
-    "rimraf": "^5.x",
+    "gulp": "^5.0.1",
+    "rimraf": "^6.0.1",
     "string-replace-source-map": "^1.3.0",
     "typescript": "^3.7.5"
   },
