@@ -27,7 +27,7 @@
     "src/**/*.d.ts"
   ],
   "devDependencies": {
-    "closure-calculate-chunks": "^3.1.1",
+    "closure-calculate-chunks": "^3.2.2",
     "google-closure-compiler": "^20240317.0.0",
     "gulp": "^5.0.1",
     "rimraf": "^6.0.1",
@@ -37,5 +37,6 @@
   "resolutions": {
     "ansi-regex": "^5.0.1",
     "glob-parent": "^5.1.2"
-  }
+  },
+  "packageManager": "yarn@4.13.0"
 }
