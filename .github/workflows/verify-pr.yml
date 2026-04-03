@@ -21,6 +21,12 @@ jobs:
         with:
           node-version: 24
           cache: yarn
+
+      # install yarn via corepack
+      - name: Install yarn
+        run: |
+          corepack enable
+          corepack install --global yarn@stable
       # install deps
       - run: yarn install
       # typechecking

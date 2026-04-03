@@ -21,6 +21,13 @@ jobs:
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org/
+
+      # install yarn via corepack
+      - name: Install yarn
+        run: |
+          corepack enable
+          corepack install --global yarn@stable
+
       - name: Install packages
         run: YARN_ENABLE_COLORS=true yarn install
       - name: Build
